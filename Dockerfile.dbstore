@@ -1,0 +1,4 @@
+FROM python:3.9
+ADD dbstore.py config.py requirements.txt /app/
+RUN pip3 install -r /app/requirements.txt
+ENTRYPOINT python3 /app/dbstore.py --config /config/config.yml
